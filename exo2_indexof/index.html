@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //decoupe lettre par lettre.
+        var str = 'lalopallalali'.split('');
+
+        // Variante avec apply
+        str.push.apply(str);
+        // Visualisation dans la console
+        if (window.console) console.log(JSON.stringify(str));
+
+        var motif = 'lala'.split('');
+
+        // Variante avec apply
+        str.push.apply(motif);
+        // Visualisation dans la console
+        if (window.console) console.log(JSON.stringify(motif));
+
+        for (var i = 0; i < str.length; i++) {
+
+            console.log(prenom[i]);
+            // maChaine[i] renvoie le ième caractère de maChaine
+
+            // ...
+
+        }
+        // var pos = str.indexOf(motif);
+        // console.log(pos)
+
+        // for (var j = 0; j < str.lenght; j++) {
+        //     for (var k = 0; k < str.length; k++) {
+        //         if (motif[j].match(str[k])) {
+
+        //         } else {}
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr1 = ['a', 'b', 'd', 'f', 'h', 'm', 'n', 'o', 'p', 'z'];;
+        var arr2 = ['a', 'c', 'e', 'i', 'm', 'r', 's', 't', 'w', 'z'];;
+
+        var arr3 = arr1.concat(arr2);
+        console.log(arr3)
+
+        function unique(arr3) {
+            var result = '';
+            for (var i = 0; i < arr3.length; i++) {
+                if (result.indexOf(arr3[i]) < 0) {
+                    result += arr3[i];
+                }
+            }
+            return result;
+        }
+
+        //Classées par ordre alphabétique:
+
+        console.log("Triées : " + arr3.sort() + "\n\n");
+
+        // faire sotter les doublons :
+
+        //cleanArray removes all duplicated elements
+        function cleanArray(array) {
+            var i, j, len = array.length,
+                out = [],
+                obj = {};
+            for (i = 0; i < len; i++) {
+                obj[array[i]] = 0;
+            }
+            for (j in obj) {
+                out.push(j);
+            }
+            return out;
+        }
+        var nbr = arr3;
+        var newNbr = cleanArray(nbr);
+        console.log(newNbr);
+    </script>
+
+</body>
+
+</html>

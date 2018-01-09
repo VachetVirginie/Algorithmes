@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Anagrammes preseents dans la phrase: "Le chien marche vers sa niche et trouve une limace de chine nue pleine de malice qui lui fait du charme"</h1>
+    <script>
+        function sortStrChars(str) {
+            if (!str) {
+                return;
+            }
+            str = str.split('');
+            str = str.sort();
+            str = str.join('');
+            return str;
+        }
+
+        const words = ["Le", "chien", "marche", "vers", "sa", "niche", "et", "trouve", " une", "limace", "de", "chine", "nue", "pleine", "de", "malice", "qui", "lui", "fait", "du", "charme"];
+
+        function getGroupedAnagrams(words) {
+            const anagrams = {}; // {abc:[abc,cba], dell:[dell, ledl]}
+            words.forEach((word) => {
+                const sortedWord = sortStrChars(word);
+                if (anagrams[sortedWord]) {
+                    return anagrams[sortedWord].push(word);
+                }
+                anagrams[sortedWord] = [word];
+            });
+            return anagrams;
+        }
+
+        const groupedAnagrams = getGroupedAnagrams(words);
+        for (const sortedWord in groupedAnagrams) {
+            console.log(groupedAnagrams[sortedWord].toString());
+        }
+    </script>
+
+</body>
+
+</html>
